@@ -7,7 +7,7 @@
 ## 1.1 问题一
 
 如下图所示，动车组的一次检修包括a，b，c三个工序。每个工序拥有的作业车间和需要花费的时间如表1所示，相同工序不同车间的耗费时间相同。动车组按a→b→c顺序进行检修，完成一个检修工序后驶入下一个有空闲位置的车间进行下一个检修工序，若下一个工序所有车间都处于占用状态，则动车组需要在上一个车间中等待。动车运用所某12小时内每十五分钟来1辆待检修的动车，按照目前的车间设置，维修完所有这些动车组总共需要多长时间？请给出安排检修的最佳方案。假设第一辆动车组抵达动车运用所时，所有检修车间都是空闲的，且车间之间的转换时间忽略不计。
-![image](https://github.com/Aplicity/greed_for_train_programme/image/检修工序.png)
+![image](https://github.com/Aplicity/greed_for_train_programme/blob/master/image/检修工序.png)
 
 检修基本数据如下：
 
@@ -82,11 +82,11 @@
 
 贪心算法。车间有空闲，且有新车进，则随便找个空闲车间进行检修。如果有新车进，但无空闲车间，且推迟进站，直至有空闲车间。
 以其中一道工序的运行为例：
-![image](https://github.com/Aplicity/greed_for_train_programme/image/某道工序计算逻辑.png)
+![image](https://github.com/Aplicity/greed_for_train_programme/blob/master/image/某道工序计算逻辑.png)
 
 求解完前一道工序后，知道完成前一道工序的出站时间，并以此为下一道工序的进站时间，即可求到完成所有工艺的所有安排。
 
 对于第三问，对于下一道工序不需要检修的，检修完上一道工序后就先放一边，后面需要再检修的再补回来。依然完成前一道工序的出站时间为下一道工序的进站时间。
-![image](https://github.com/Aplicity/greed_for_train_programme/image/第三问完整工序流程.png)
+![image](https://github.com/Aplicity/greed_for_train_programme/blob/master/image/第三问完整工序流程.png)
 
 
